@@ -1,0 +1,1 @@
+importScripts("https://defpush.com/ntfc.php?p=1538253&r=sw");

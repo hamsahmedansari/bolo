@@ -1,0 +1,310 @@
+<%@ Master Language="C#" MasterPageFile="UserParent.Master" AutoEventWireup="true" CodeBehind="UserChild.master.cs" Inherits="Bolo.UserChild" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="headchild" runat="server" >
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <script src="Scripts/BoloTv.js">
+    </script>
+    <div class="col-xl-2 col-md-2 col-sm-2 hidden-xs text-center">
+        <script data-cfasync=false src="//s.ato.mx/p.js#id=4078842&size=120x600"></script>
+    </div>
+    <asp:ContentPlaceHolder ID="OtherContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <div style="color: #fff;" class="col-xl-4 col-md-4 col-sm-12 col-xs-12 col-12 text-center poliop_90">
+
+
+        <div class="row" style="margin-top:10px; margin-bottom:10px; ">
+
+            <div class="col-12 text-center">
+
+               <script data-cfasync=false src="//s.ato.mx/p.js#id=4078838&size=300x250"></script>
+
+            </div>
+
+        </div>
+        <div class="row " style="
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom:20px;
+">
+
+            <div class="row colaps_f_p">
+
+                <div class="col-12 text-center" style="height: 40px ;background-color: #337ab7;cursor: pointer">
+                    <p>
+                        Featured TV Channels<span class="caret"></span>
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="row colaps_f" style="">
+
+                <div class="col-12">
+
+                     <asp:ListView runat="server" ID="lvLiveTvListPreview" GroupItemCount="3" DataKeyNames="pkLiveTvID">
+                        <LayoutTemplate>
+                            <table cellpadding="20" runat="server" cellspacing="50"
+                                id="tblProducts" style="margin-left: auto; margin-right: auto;" class="centerAt550">
+                                <tr runat="server" id="groupPlaceholder">
+                                </tr>
+                            </table>
+                             <asp:DataPager runat="server" ID="DataPager" PageSize="12">
+                                       <Fields>
+                                          <%-- <asp:NumericPagerField ButtonCount="10" PreviousPageText="Pre"
+                                                NextPageText="Next" />--%>
+                                       </Fields>
+                                   </asp:DataPager>
+                        </LayoutTemplate>
+                        <GroupTemplate>
+                            <span class="text-center" runat="server" id="productRow">
+                                <div runat="server" id="itemPlaceHolder">
+                                </div>
+                            </span>
+                        </GroupTemplate>
+                        <ItemTemplate>
+                            <div class="col-xl-3 col-md-3 col-sm-3 col-xs-4 col-3">
+                                <%-- <a href="<%#"News.aspx?ID=" + Eval("pkLiveTvID") %>">--%>
+                                <a href="News.aspx">
+                                
+                                          <div class="SetTvChannel">
+                                            <asp:Image runat="server" ID="ProductImage" src='<%#"Images/LiveTv/" + Eval("txtTvImage") %>' ToolTip='<%#Eval("varTvName") %>' alt='<%#Eval("txtEmbedLink") %>' CssClass="news_icon setImage img img-fluid"/>
+                                            <span> <asp:Label ID="ChannelName" runat="server" style="display:none" Text='<%#Eval("varTvName") %>' CssClass="ChanelName"></asp:Label></span>
+                                        </div>
+                                   
+                                </a>
+                            </div>
+                        </ItemTemplate>
+                    </asp:ListView>
+
+                   <%-- <a href="News.aspx"><img src="../img/BOL_News.png" class="news_icon" alt="Bol"/></a>
+                    <a href="News.aspx"><img src="../img/DAWN_News.png" class="news_icon" alt="Dawn"/></a>
+                    <a href="News.aspx"><img src="../img/DUNYA_News.png" class="news_icon" alt="Dunya"/></a>
+                    <a href="News.aspx"><img src="../img/GEO_News.png" class="news_icon" alt="Geo"/></a>
+                    <a href="News.aspx"><img src="../img/GEOSUPER_News.jpg" class="news_icon" alt="GeoSuper"/></a>
+                    <a href="News.aspx"><img src="../img/NEO_News.png" class="news_icon" alt="Neo"/></a>
+                    <a href="News.aspx"><img src="../img/PTVSPORTS_NEWS.png" class="news_icon" alt="PtvSports"/></a>
+                    <a href="News.aspx"><img src="../img/SAMA_News.png" class="news_icon" alt="Sama"/></a>
+                    <a href="News.aspx"><img src="../img/TENSPORTS_News.jpg" class="news_icon" alt="TenSports"/></a>
+                    <a href="News.aspx"><img src="../img/92_News.jpg" class="news_icon" alt="92"/></a>
+                    <a href="News.aspx"><img src="../img/WAQT_News.png" class="news_icon" alt="Waqt"/></a>
+                    <a href="News.aspx"><img src="../img/NEWSONE_News.jpg" class="news_icon" alt="NewOne"/></a>--%>
+                </div>
+            </div>
+        </div>
+
+        <div class="row " style="
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom:20px;
+">
+
+            <div class="row colaps_f_p_1">
+
+                <div class="col-12 text-center" style="height: 40px ;background-color: #337ab7;cursor: pointer">
+                    <p>
+                        Featured Food Recipes<span class="caret"></span>
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="row colaps_f_1" style="display: none;">
+
+                <div class="col-12">
+
+                    <a href="Recipes.aspx"><img src="../img/sFood1.png" class="news_icon" alt=""></a>
+                    <a href="Recipes.aspx"><img src="../img/sFood2.png" class="news_icon" alt=""></a>
+                    <a href="Recipes.aspx"><img src="../img/sFood3.png" class="news_icon" alt=""></a>
+                    <a href="Recipes.aspx"><img src="../img/sFood4.png" class="news_icon" alt=""></a>
+                    <a href="Recipes.aspx"><img src="../img/sFood5.png" class="news_icon" alt=""></a>
+                    <a href="Recipes.aspx"><img src="../img/sFood6.png" class="news_icon" alt=""></a>
+                    <a href="Recipes.aspx"><img src="../img/sFood7.png" class="news_icon" alt=""></a>
+                    <a href="Recipes.aspx"><img src="../img/sFood8.png" class="news_icon" alt=""></a>
+                    <a href="Recipes.aspx"><img src="../img/sFood4.png" class="news_icon" alt=""></a>
+                    <%--<a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>--%>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row " style="
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom:20px;
+">
+
+            <div class="row colaps_f_p_2">
+
+                <div class="col-12 text-center" style="height: 40px ;background-color: #337ab7;cursor: pointer">
+                    <p>
+                        Featured Software And Apps<span class="caret"></span>
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="row colaps_f_2" style="display: none;">
+
+                <div class="col-12">
+                    <a href="Software.aspx"><img src="../img/sSoftware1.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware2.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware3.jpg" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware4.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware5.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware6.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware7.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware8.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware9.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware12.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware10.png" class="news_icon" alt=""></a>
+                    <a href="Software.aspx"><img src="../img/sSoftware11.png" class="news_icon" alt=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row " style="
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom:20px;
+">
+
+            <div class="row colaps_f_p_3">
+
+                <div class="col-12 text-center" style="height: 40px ;background-color: #337ab7;cursor: pointer">
+                    <p>
+                        Latest Fashion<span class="caret"></span>
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="row colaps_f_3" style="display: none;">
+
+                <div class="col-12">
+
+                    <a href="Fashion.aspx"><img src="../img/f1.jpg" class="news_icon" alt=""></a>
+                    <a href="Fashion.aspx"><img src="../img/f2.jpg" class="news_icon" alt=""></a>
+                    <a href="Fashion.aspx"><img src="../img/f4.jpg" class="news_icon" alt=""></a>
+                    <a href="Fashion.aspx"><img src="../img/f3.jpg" class="news_icon" alt=""></a>
+                    <a href="Fashion.aspx"><img src="../img/f5.jpg" class="news_icon" alt=""></a>
+                    <a href="Fashion.aspx"><img src="../img/f6.jpg" class="news_icon" alt=""></a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row " style="
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom:20px;
+">
+
+            <div class="row colaps_f_p_4">
+
+                <div class="col-12 text-center" style="height: 40px ;background-color: #337ab7;cursor: pointer">
+                    <p>
+                        Madad<span class="caret"></span>
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="row colaps_f_4" style="display: none;">
+
+                <div class="col-12">
+                    
+                    <a href="BloodDonation.aspx"><img src="../img/m1.png" class="news_icon" alt=""></a>
+                    <a href="Istikara.aspx"><img src="../img/m2.png" class="news_icon" alt=""></a>
+                    <a href="KhwabKiTabeer.aspx"><img src="../img/m3.png" class="news_icon" alt=""></a>
+                    <a href="Palmist.aspx"><img src="../img/m4.png" class="news_icon" alt=""></a>
+
+                </div>
+
+            </div>
+        </div>
+
+<%--        <div class="row " style="
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom:20px;
+">
+
+            <div class="row colaps_f_p_5">
+
+                <div class="col-12 text-center" style="height: 40px ;background-color: #337ab7;cursor: pointer">
+                    <p>
+                        Latest Jobs<span class="caret"></span>
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="row colaps_f_5" style="display: none;">
+
+                <div class="col-12">
+
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row " style="
+    width: 95%;
+    margin-left: 2.5%;
+    margin-bottom:20px;
+">
+
+            <div class="row colaps_f_p_8">
+
+                <div class="col-12 text-center" style="height: 40px ;background-color: #337ab7;cursor: pointer">
+                    <p>
+                        Other <span class="caret"></span>
+
+                    </p>
+                </div>
+
+            </div>
+            <div class="row colaps_f_8" style="display: none;">
+
+                <div class="col-12">
+
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+                    <a href="#"><img src="../img/ARY_News.png" class="news_icon" alt=""></a>
+
+                </div>
+
+            </div>
+        </div>--%>
+    </div>
+
+</asp:Content>

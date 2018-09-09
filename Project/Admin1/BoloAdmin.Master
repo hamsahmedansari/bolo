@@ -1,0 +1,233 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BoloAdmin.master.cs" Inherits="Bolo.BoloAdmin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title></title>
+    <link href="../Styles/Bolo_MasterStyleSheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../Scripts/Bolo_JavaScriptFunctions.js"></script>
+    <script type="text/javascript">
+//<![CDATA[
+
+        function HighLightSelected(hfIsRowSelected, RowState) {
+            if (hfIsRowSelected.value == 1) hfIsRowSelected.parentElement.parentElement.style.backgroundColor = '#FF9999';
+            else {
+                if (RowState == '0') hfIsRowSelected.parentElement.parentElement.style.backgroundColor = 'white';
+                else hfIsRowSelected.parentElement.parentElement.style.backgroundColor = 'Gainsboro';
+            }
+        } //]]>
+
+        function SelectDeSelectRow(hfIsRowSelected, RowState) {
+            if (hfIsRowSelected.value == 1) 
+                hfIsRowSelected.value = 0
+            else
+                hfIsRowSelected.value = 1
+
+           HighLightSelected(hfIsRowSelected, RowState);
+        }
+
+        //function ValidateSelectionForWelders() {
+            //var dgvWelds1 = document.getElementById("dgvWelds");
+            
+
+            //for (var index = 1; index < dgvWelds1.rows.length; index++) {
+            //    var isRowSelected = dgvWelds1.rows[index].cells[0].getElementById("hfIsRowSelected");
+            //    alert(isRowSelected);
+          //  }
+
+
+            //var dgvWelds = document.getElementById("dgvWelds");
+            //for (var index = 1; index < dgvWelds.rows.length; index++) {
+            //    var cell = dgvWelds.row[index].cells;
+            //    var result = true;
+            //    alert(cell[1].innerText + '---' + cell[7].innerText)
+            //  //  if ((cell[1].innerText == '1') && (cell[7].innerText != ''))
+                //    result = false;
+
+        //    }
+
+            //return result;
+
+            //var rows = dgvWelds.rows; // .find('tr');
+
+            //alert('salman1')
+            //for (var index = 1; index < dgvWelds.rows.length; index++) {
+            //    alert('salman2')
+            //    var row = rows[index];
+            //    alert('salman3')
+            //    var cellSelect = row(1).getCell(2).innerText;
+            //    alert(kala);
+            //    alert(rows.length);
+            //    var isRowSelected = row.find("hiddenfield:hfIsRowSelected").value; //  $(row).find("[id*=hfIsRowSelected]").value;
+            //    var welderSymbol //= row.getElementById("hfWelderSymbol").value  //$(row).find("[id*=hfWelderSymbol]").value;
+            //    alert('salman4')
+
+            //    //var cell = dgvWelds.rows[index].cells;
+            //    //var HTML = cell[0].innerHTML;
+
+            //    alert(isRowSelected + '----' + welderSymbol);
+            //    //if (HTML.indexOf("hfIsRowSelected") == 1 && (cell[5].innerHTML) != '') {
+            //     //   alert(cell[1].innerHTML + '-----' + cell[5].innerHTML);
+            //    //}
+            //    //var ifRowSelected = document.getElementById("hfIsRowSelected");
+            //    //var welderSymbol = document.getElementById("hfIsRowSelected");
+            //}
+        
+
+    </script>
+</head>
+<body style="margin-top:0px;">
+    <form id="MasterForm" runat="server">
+    <div>
+    
+        <table cellpadding="0" cellspacing="0" style="width:100%;">
+            <tr>
+                <td colspan="2" align="center" style="text-align:left;height:50px;width:100%;font-weight:bolder;font-size:25px;">
+                    Bolo.com.pk&nbsp;&nbsp;&nbsp; Admin</td>
+            </tr>
+            <tr style="background-color:#8199B1;">
+                <td colspan="2">
+                    <table width="100%" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td style="width:70%;" align="center">
+                                &nbsp;</td>
+                            <td align="right">
+                                <asp:LinkButton runat="server" ID="LoginLink" CssClass="LoginLink" Text="Login" CausesValidation="false" OnClick="LoginLink_Click" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                  <td style="width:20%;height:60%; vertical-align:top;border-right:solid thin black;border-top:solid thin black;">
+                        <asp:Menu ID="LeftMenu" runat="server" class="menutitle"
+                            Orientation="Vertical"
+                        	
+                            StaticMenuItemStyle-BackColor="#CCD6E0" 
+                            StaticMenuItemStyle-Font-Names="Arial"
+                            StaticMenuItemStyle-Font-Size="12pt" 
+                            StaticMenuItemStyle-ForeColor="#000000"
+                            StaticMenuItemStyle-HorizontalPadding="4"
+                            StaticMenuItemStyle-ItemSpacing="2px"
+                            StaticMenuItemStyle-VerticalPadding="2" 
+                            StaticMenuItemStyle-BorderColor="#CCD6E0" 
+                            StaticMenuItemStyle-BorderStyle="solid"
+                            StaticMenuItemStyle-BorderWidth="2px" 
+                            StaticMenuItemStyle-Width="224px" 
+                        	
+                            StaticSelectedStyle-BackColor="#999999"
+                            StaticSelectedStyle-ForeColor="White"
+                            StaticSelectedStyle-BorderColor="#999999" 
+                            StaticSelectedStyle-BorderStyle="solid"
+                            StaticSelectedStyle-BorderWidth="2px"
+                        	
+                            StaticHoverStyle-BackColor="#CCD6E0" 
+                            StaticHoverStyle-ForeColor="#999999"
+                            StaticHoverStyle-BorderColor="#999999" 
+                            StaticHoverStyle-BorderStyle="solid"
+                            StaticHoverStyle-BorderWidth="2px" Width="224px" OnMenuItemClick="LeftMenu_MenuItemClick"  >
+                            <DynamicHoverStyle BackColor="White" BorderColor="White" BorderStyle="Solid" 
+                                BorderWidth="2px" ForeColor="Red" />
+                            <DynamicMenuItemStyle BackColor="#8199B1" BorderColor="White" BorderStyle="Solid" 
+                                BorderWidth="2px" Font-Names="Arial" ForeColor="White" HorizontalPadding="1px" 
+                                ItemSpacing="1px" VerticalPadding="1px" />
+                            <DynamicSelectedStyle BackColor="#999999" BorderColor="#999999" 
+                                BorderStyle="Solid" ForeColor="White" />
+                            <Items>
+                                <asp:MenuItem Text="Registerd Users" Value="RegisteredUsers" tooltip="Registered Users" ></asp:MenuItem>
+                                <asp:MenuItem Text="Movies" Value="Movies" tooltip="Movies"></asp:MenuItem>
+                                <asp:MenuItem Text="Poetry" Value="Poetry" tooltip="Poetry"></asp:MenuItem>
+                                <asp:MenuItem Text="Games" Value="Games" tooltip="Games"></asp:MenuItem>
+                                <asp:MenuItem Text="Softwares" Value="Softwares" tooltip="Softwares"></asp:MenuItem>
+                                <asp:MenuItem Text="News" Value="News" tooltip="News"></asp:MenuItem>
+                                 <asp:MenuItem Text="Dramas" Value="Dramas" tooltip="Dramas"></asp:MenuItem>
+                                <asp:MenuItem Text="Recipes" Value="Recipes" toolTip="Recipes"></asp:MenuItem>
+                                <asp:MenuItem Text="Estates" Value="Estates" ToolTip="Estates"></asp:MenuItem>
+                                <asp:MenuItem Text="Istikara" Value="Istikara" ToolTip="Istikara"></asp:MenuItem>
+                                <asp:MenuItem Text="Jobs" Value="Jobs" ToolTip="Jobs"></asp:MenuItem>
+                               <%--  <asp:MenuItem Text="Mobiles" Value="Mobiles" ToolTip="Mobiles"></asp:MenuItem>--%>
+                                 <asp:MenuItem Text="Songs" Value="Songs" ToolTip="Songs"></asp:MenuItem>
+                                <asp:MenuItem Text="BloodDonations" Value="BloodDonations" ToolTip="BloodDonations"></asp:MenuItem>
+                                <asp:MenuItem Text="Fashion" Value="Fashion" ToolTip="Fashion"></asp:MenuItem>
+                                <asp:MenuItem Text="KhwabKiTabeer" Value="KhwabKiTabeer" ToolTip="KhwabKiTabeer"></asp:MenuItem>
+                                <asp:MenuItem Text="Student" Value="Student" ToolTip="Student"></asp:MenuItem>
+                                <asp:MenuItem Text="Palmist" Value="Palmist" ToolTip="Palmist"></asp:MenuItem>
+                                <asp:MenuItem Text="Free Stuff" Value="FreeStuff" ToolTip="Free Stuff"></asp:MenuItem>
+                                <asp:MenuItem Text="Gems" Value="Gems" ToolTip="Gems"></asp:MenuItem>
+                                <asp:MenuItem Text="Poems" Value="Poem" ToolTip="Poem"></asp:MenuItem>
+                                <asp:MenuItem Text="Resume" Value="Resume" ToolTip="Resume"></asp:MenuItem>
+                                <asp:MenuItem Text="EstateAds" Value="EstateAds" ToolTip="EstaeAds"></asp:MenuItem>
+                                <asp:MenuItem Text="JobAds" Value="JobAds" ToolTip="JobAds"></asp:MenuItem>
+                                 <asp:MenuItem Text="LiveTv" Value="LiveTv" ToolTip="LiveTv"></asp:MenuItem>
+                                 <asp:MenuItem Text="ADS" Value="ADS" ToolTip="ADS"></asp:MenuItem>
+                            </Items>
+                            <StaticMenuItemStyle BackColor="#6699FF" BorderColor="White" BorderStyle="Solid"
+                                BorderWidth="5px" Font-Names="Arial" Font-Size="12pt" ForeColor="White" HorizontalPadding="1px"
+                                ItemSpacing="1px" VerticalPadding="8px" Width="215px" />
+                            <StaticSelectedStyle BackColor="#999999" BorderColor="#999999" BorderStyle="Solid"
+                                BorderWidth="2px" ForeColor="White" Width="215px" Font-Names="Arial" 
+                                Font-Size="12pt" HorizontalPadding="1px" ItemSpacing="1px" 
+                                VerticalPadding="8px" />
+                            <StaticHoverStyle BackColor="White" BorderColor="#6699FF" BorderStyle="Solid" BorderWidth="5px"
+                                ForeColor="#6699FF" Width="215px" />
+                        </asp:Menu>   
+
+
+                    <!-- Keep all menus within masterdiv-->
+                    <%--<div id="masterdiv" style="margin-top:25px;">
+
+
+	                    <div class="menutitle" onclick="SwitchMenu('sub1')">
+                            <a href="FindItem.aspx" class="menutitle">Inventory</a><br />
+                            
+
+	                    </div>
+	                    <span class="submenu" id="sub1">
+	                        <a href="FindItem.aspx" class="submenuLink">- Search</a><br />
+	                        <a href="MaintainItem.aspx" class="submenuLink">- Items</a><br />
+	                        <a href="ViewItemVersionInfo.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- Versions</a><br />
+	                        <a href="MaintainItemInventoryLocation.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- Locations</a><br />
+	                        <a href="MaintainInventory.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- Inventory</a><br />
+	                        <a href="ViewItemHistory.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- History</a><br />
+	                        <a href="MaintainItemAlternate.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- Alternates</a><br />
+	                    </span>
+
+	                    <div class="menutitle" onclick="SwitchMenu('sub2')">Manufacturing</div>
+	                    <span class="submenu" id="sub2">
+		                    <a href="MaintainItemVersion.aspx" class="submenuLink">- Item Versions</a> <br />
+                            <a href="MaintainBOM.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- BOMs</a> <br />
+                            <a href="MaintainOperation.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- Operations</a><br />
+                            <a href="MaintainOperationResource.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Resources</a><br />
+                            <a href="MaintainOperationMachine.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Machines</a><br />
+		                    <a href="MaintainWorkcenter.aspx" class="submenuLink">- Workcenters</a><br />
+		                    <a href="MaintainMachine.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- Machines</a>
+	                    </span>
+	                    
+	                    <div class="menutitle" onclick="SwitchMenu('sub3')">Administration</div>
+	                    <span class="submenu" id="sub3">
+		                    <a href="MaintainEmployee.aspx" class="submenuLink">- Employee Mgmt</a><br />
+		                    <a href="MaintainEmployeeAccess.aspx" class="submenuLink">&nbsp;&nbsp;&nbsp;- System Access</a> <br />
+	                    </span>
+
+                    </div>--%>
+   
+                </td>
+                <td style="height:400px;vertical-align:top;border-top:solid thin black;">
+                
+                    <asp:ContentPlaceHolder ID="Content" runat="server">
+                    </asp:ContentPlaceHolder>
+                
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:center;color:#FFFFFF;border-top:solid thin black;background-color:#8199B1;font-weight:bold;" colspan="2">Bolo.com.pk</td>
+            </tr>     
+        
+        </table>
+    
+    </div>
+    </form>
+</body>
+</html>
+

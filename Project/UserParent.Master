@@ -1,0 +1,254 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserParent.master.cs" Inherits="Bolo.UserParent" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta name="propeller" content="060af257d9cadcabb1a829f1653943d4"/>
+    <script src="dist/ads/sw.js"></script>
+   
+    <script async="async" type="text/javascript" src="//go.mobisla.com/notice.php?p=1538237&interactive=1&pushup=1"></script>
+
+    <meta charset="utf-8" />
+    <link href="dist/dist/socialmicons/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%--<link rel="icon" href="img/logo.png" />--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../dist/css/animate.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="engine1/style.css" />
+    <script type="text/javascript" src="engine1/jquery.js"></script>
+    <link href="dist/css/main.css" rel="stylesheet" />
+    <script src="dist/js/main.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111767473-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-111767473-1');
+</script>
+    <%-- propeller Adsence --%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" method="post">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+
+        </asp:ContentPlaceHolder>
+  <nav class="navbar   top_box_shawod1 " style="margin-bottom: 10px;">
+        <div class="container-fluid">
+            <div class="navbar-header" style="
+    width:  100%;
+    height: 96px;
+">
+                <a class="navbar-brand" href="Default.aspx">
+
+                    <img src="../img/logo.png" class="img img-fluid logo_custom_display"  style="max-width: 170px;width: 100%;margin-left: 35px;margin-top: 10px;" alt="">
+
+               </a>
+
+                <div class="navbar-brand header_logo_ad" href="#" style="float:  right;">
+                    <script data-cfasync=false src="//s.ato.mx/p.js#id=4078837&size=728x90" ></script>
+                    </div>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+                    <span class="icon-bar  nav_po_1"></span>
+                    <span class="icon-bar nav_po_2"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbar">
+
+                <ul class="nav navbar-nav custon_nav_res_width_100" style="float: right;margin-right: 10px;margin-top: 11px;">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="News.aspx">
+                            Live Tv
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="BlogNews.aspx">
+                            News Update
+                        </a>
+                    </li>
+                   <%-- <li class="dropdown">
+                        <a class="dropdown-toggle"  href="Movies.aspx">
+                            Movies
+                        </a>
+                    </li>--%>
+                    <%--<li class="dropdown">
+                        <a class="dropdown-toggle"  href="Dramas.aspx">
+                            Drama
+                        </a>
+                    </li>--%>
+                    <%--<li class="dropdown">
+                        <a class="dropdown-toggle" href="Cartoon.aspx">
+                            Cartoons
+                        </a>
+                    </li>--%>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="Poem.aspx">
+                            Poem
+                        </a>
+                    </li>
+                    <%--<li class="dropdown">
+                        <a class="dropdown-toggle" href="Songs.aspx">
+                            Songs
+                        </a>
+                    </li>--%>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="Poetry.aspx">
+                            Poetry
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="Software.aspx">
+                            Software
+                        </a>
+                    </li>
+                    <%--<li class="dropdown">
+                        <a class="dropdown-toggle"  href="Game.aspx">
+                            Games
+                        </a>
+                    </li>--%>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"  href="Istikara.aspx">
+                            Istikhara
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="KhwabKiTabeer.aspx">
+                            Khuwab ki Tabeer
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="Palmist.aspx">
+                            Palmist Online
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Recipes
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu custon_nav_res_color_100">
+                            <li><a href="Recipes.aspx">Pakistani</a></li>
+                            <li><a href="Recipes.aspx">Indian</a></li>
+                            <li><a href="Recipes.aspx">Chines</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"  data-toggle="dropdown" href="#">
+                            Fashion
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu custon_nav_res_color_100">
+                            <li><a href="Fashion.aspx">Male</a></li>
+                            <li><a href="Fashion.aspx">Female</a></li>
+                            <li><a href="Fashion.aspx">Childrens</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            Jobs
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu custon_nav_res_color_100">
+                            <li><a href="Jobs.aspx">Pakistan</a></li>
+                            <li><a href="Jobs.aspx">Meddleast</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="Student.aspx">
+                            Students
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"  href="RealEstate.aspx">
+                            Real Estate
+                        </a>
+                    </li>
+                    <%--<li class="dropdown">
+                        <a class="dropdown-toggle"  href="#">
+                            Live Chat
+                        </a>
+                    </li>--%>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="BloodDonation.aspx">
+                            Blood Donation
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"  href="FreeStuff.aspx">
+                            Free Stuff
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"  href="Gems.aspx">
+                         Gems
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"  href="AboutUs.aspx">
+                            About
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"  href="Contact.aspx">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle"  href="Youtube.aspx">
+                            BoloTube
+                        </a>
+                    </li>
+                    
+                    <li class="dropdown"=>
+                 <asp:Panel runat="server" ID="LoginContainer" Visible="true">
+                        <a class="dropdown-toggle custom_login_button" style="padding: 9px;background-color:#337ab7;color:#fff;" data-toggle="dropdown" href="">
+                            Client Login/Join
+                            <span class="caret" style="margin-right: 11px;"></span>
+                        </a>
+                        <div class="dropdown-menu custon_nav_res_color_100" style="padding:10px;">
+
+                            <h4 style="text-align:center;">
+                                Bolo Kaamo
+                            </h4>
+                            <hr />
+                            <asp:Button runat="server" ID="btnGoToLogin" Text="Login" UseSubmitBehavior="false" class="btn  btn-success" style="width:100%" OnClick="btnGoToLogin_Click">
+                            </asp:Button>
+                            <asp:Button runat="server" ID="btnGoToRegister" Text="Join Now" UseSubmitBehavior="false" class="btn  btn-success" style="width:100%" OnClick="btnGoToRegister_Click">
+                            </asp:Button>
+                        </div>
+                   </asp:Panel>
+                    </li>
+                        <li class="dropdown">
+                    <asp:Panel runat="server" ID="LogoutContainer" Visible="false">
+                            <asp:LinkButton runat="server" ID="Logout" Text="Logout" OnClick="Logout_Click"></asp:LinkButton>
+                    </asp:Panel>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+        <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+        </div>
+        <footer id="myFooter">
+        <div class="text_center">
+            <p>
+                Developed by © <span><a href="Default.aspx">Bolo.com.pk</a></span>
+            </p>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
+
